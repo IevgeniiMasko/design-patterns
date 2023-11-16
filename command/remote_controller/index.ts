@@ -7,6 +7,16 @@ import {
 import { Light, Stereo } from './receivers';
 import { RemoteController } from './remote_controller';
 
+// client: main
+// -- desc: creates and configures concrete command objects. It passes the request parameters, including a receiver instance, into the command’s constructor.
+// -- desc: after that, the resulting command may be associated with one or multiple senders
+// receivers: light, stereo, etc
+// -- desc: contains some business logic. Only handles how a request is passed to the receiver, while the receiver itself does the actual work.
+// commands: lightOnCommand, lightOffCommand etc
+// -- desc: not supposed to perform the work on its own, but rather to pass the call to one of the business logic objects (receiver).
+// sender/invoker: remoteController
+// -- desc: responsible for initiating requests. This class must have a field for storing a reference to a command object
+
 class Main {
   static main() {
     const remoteController = new RemoteController();
