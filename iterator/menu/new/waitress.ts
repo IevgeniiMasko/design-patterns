@@ -1,10 +1,8 @@
-import { BreakfastMenu } from './breakfast-menu';
-import { Iteractor } from './iterator';
-import { LunchMenu } from './lunch-menu';
-import { MenuItem } from './menu-item';
+import { IMenu, Iteractor } from './menus/interfaces';
+import { MenuItem } from './menus/menu-item';
 
 export class Waitress {
-  constructor(public breakfast: BreakfastMenu, public lunchMenu: LunchMenu) {}
+  constructor(public breakfast: IMenu, public lunchMenu: IMenu) {}
 
   public printMenu() {
     const breakfastInterator = this.breakfast.createIterator();

@@ -1,7 +1,7 @@
-import { Iteractor } from './iterator';
+import { IMenu, Iteractor } from './interfaces';
 import { MenuItem } from './menu-item';
 
-export class LunchMenu {
+export class LunchMenu implements IMenu {
   public MAX_ITEMS = 6;
   menuItems: MenuItem[] = [];
 

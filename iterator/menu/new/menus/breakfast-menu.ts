@@ -1,7 +1,7 @@
-import { Iteractor } from './iterator';
+import { IMenu, Iteractor } from './interfaces';
 import { MenuItem } from './menu-item';
 
-export class BreakfastMenu {
+export class BreakfastMenu implements IMenu {
   menuItems: Map<number, MenuItem>;
 
   constructor() {

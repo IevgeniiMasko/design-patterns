@@ -1,5 +1,5 @@
-import { BreakfastMenu } from './breakfast-menu';
-import { LunchMenu } from './lunch-menu';
+import { BreakfastMenu } from './menus/breakfast-menu';
+import { LunchMenu } from './menus/lunch-menu';
 import { Waitress } from './waitress';
 
 class Main {
